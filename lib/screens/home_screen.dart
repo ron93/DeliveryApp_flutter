@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instant_delivery/data/data.dart';
+import 'package:instant_delivery/screens/cart_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -27,8 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             onPressed: () => Navigator.push(context,
-              MaterialPageRoute(builder: (_) => CartScreen)
-            ),
+              MaterialPageRoute(builder: (_) => CartScreen())),
           )
         ],
       ),
