@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instant_delivery/data/data.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -15,7 +16,21 @@ class _HomeScreenState extends State<HomeScreen> {
           iconSize: 30,
           onPressed: () {},
         ),
-        
+        title: Text('Instamt Delivery'),
+        actions: <Widget>[
+          FlatButton(
+              child: Text(
+                'Cart (${currentUser.cart.length})',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0
+                ),
+              ),
+            onPressed: () => Navigator.push(context,
+              MaterialPageRoute(builder: (_) => CartScreen)
+            ),
+          )
+        ],
       ),
     );
   }
