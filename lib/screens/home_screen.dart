@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
           iconSize: 30,
           onPressed: () {},
         ),
-        title: Text('Instamt Delivery'),
+        title: Text('Instant Delivery'),
         actions: <Widget>[
           FlatButton(
               child: Text(
