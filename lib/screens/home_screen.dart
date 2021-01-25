@@ -8,6 +8,15 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.account_circle),
+          iconSize: 30,
+          onPressed: () {},
+        ),
+        
+      ),
+    );
   }
 }
