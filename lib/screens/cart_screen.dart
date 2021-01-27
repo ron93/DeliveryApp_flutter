@@ -168,6 +168,7 @@ class _CartScreenState extends State<CartScreen> {
                   ),
                     SizedBox(height: 10.0,),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Text(
                           'Total Cost:',
@@ -180,6 +181,7 @@ class _CartScreenState extends State<CartScreen> {
                         Text(
                           '\$${totalPrice.toStringAsFixed(2)}',
                           style: TextStyle(
+                            color: Colors.green[700],
                             fontSize: 20.0,
                             fontWeight: FontWeight.w600,
 
