@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instant_delivery/data/data.dart';
 import 'package:instant_delivery/screens/cart_screen.dart';
+import 'package:instant_delivery/widget/recent_orders.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -58,12 +59,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               suffixIcon: IconButton(
                 icon: Icon(Icons.clear),
-                onPressed: () {},
+                onPressed: () {} ,
               )
 
             ),
           ),
-          )
+          ),
+          RecentOrders(),
         ],
       ),
     );
