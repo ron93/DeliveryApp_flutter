@@ -86,7 +86,9 @@ class _CartScreenState extends State<CartScreen> {
                               ),
                               overflow: TextOverflow.ellipsis,
                             ),
+
                             SizedBox(width: 20.0,),
+
                             GestureDetector(
                               onTap: () {},
                               child: Text(
@@ -110,10 +112,11 @@ class _CartScreenState extends State<CartScreen> {
               ],
             ),
             ),
+            
             Container(
               margin: EdgeInsets.all(10.0),
               child: Text(
-                '\$${order.quantity * order.product.price}',
+                '\$${(order.quantity * order.product.price).toStringAsFixed(2)}',
                 style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.w600,
@@ -167,6 +170,7 @@ class _CartScreenState extends State<CartScreen> {
 
                   ),
                     SizedBox(height: 10.0,),
+                    //Total cost
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -188,7 +192,9 @@ class _CartScreenState extends State<CartScreen> {
                           ),
                         )
                       ],
-                    )
+                    ),
+
+                    SizedBox(height: 80.0,)
 
 
 
