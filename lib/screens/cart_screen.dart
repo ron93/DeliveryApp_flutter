@@ -112,7 +112,7 @@ class _CartScreenState extends State<CartScreen> {
               ],
             ),
             ),
-            
+
             Container(
               margin: EdgeInsets.all(10.0),
               child: Text(
@@ -141,6 +141,7 @@ class _CartScreenState extends State<CartScreen> {
         title: Text('Cart(${currentUser.cart.length})'),
       ),
       body: ListView.separated(
+
           itemBuilder: (BuildContext context, int index) {
             if (index < currentUser.cart.length) {
               Order order = currentUser.cart[index];
@@ -202,13 +203,43 @@ class _CartScreenState extends State<CartScreen> {
               ),
             );
           },
+
           separatorBuilder: (BuildContext context, int index) {
             return Divider(
               height: 1.0,
               color: Colors.grey,
             );
           },
-          itemCount: currentUser.cart.length + 1),
+
+          itemCount: currentUser.cart.length + 1
+      ),
+      bottomSheet: Container(
+        height: 100.0,
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black26,
+              offset: Offset(0, -1),
+              blurRadius: 6.0,
+            )
+          ]
+        ),
+        child: FlatButton(
+          onPressed: () {},
+          child: Text(
+            'Checkout',
+
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 22.0,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2.0,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
