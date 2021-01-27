@@ -146,13 +146,28 @@ class _CartScreenState extends State<CartScreen> {
             return Padding(
               padding: EdgeInsets.all(20.0),
               child: Column(
-                children: <Widget>[
+                  children: <Widget>[
+                    //estimated delivery time
+                  Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
                   Text(
                     'Estimated delivery Time:',
                     style: TextStyle(fontSize:20.0,
                     fontWeight:FontWeight.w600,
                   )
+                  ),
+                  Text(
+                      '25 min',
+                      style: TextStyle(fontSize:20.0,
+                        fontWeight:FontWeight.w600,
+                      )
                   )
+              ],
+
+                  )
+
+
                 ],
               ),
             );
