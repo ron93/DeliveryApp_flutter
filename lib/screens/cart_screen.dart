@@ -165,7 +165,29 @@ class _CartScreenState extends State<CartScreen> {
                   )
               ],
 
-                  )
+                  ),
+                    SizedBox(height: 10.0,),
+                    Row(
+                      children: <Widget>[
+                        Text(
+                          'Total Cost:',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w600,
+
+                          ),
+                        ),
+                        Text(
+                          '\$${totalPrice.toStringAsFixed(2)}',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w600,
+
+                          ),
+                        )
+                      ],
+                    )
+
 
 
                 ],
