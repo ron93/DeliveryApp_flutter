@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # instant_delivery
 
 
